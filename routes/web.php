@@ -19,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/')->name('product.dashboard')->uses('ProductController@index');
 Route::get('/rekening','RekeningController@index');
+Route::get('/bank/bca_cv','BankController@bca_cv');
+Route::get('/bank/bca_ardian','BankController@bca_ardian');
+Route::get('/bank/bca_akhdan','BankController@bca_akhdan');

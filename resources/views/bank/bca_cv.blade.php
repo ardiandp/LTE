@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Halaman Product</h1>
+              <h1 class="m-0 text-dark">Data Dummy</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -32,22 +32,36 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th> Code </th>
-                                    <th> Code </th>
-                                    <th> Code </th>
+                                	<th> No </th>
+                                    <th> Tanggal </th>
+                                    <th> Keterangan </th>
+                                    <th> Jumlah </th>
+                                    <th> Status </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                  
-
+                                	 <?php $no=1 ?>
+                                	  @foreach($bca_cv as $bc)
+                                	
                                     <tr>
-                                        <td>001</td>
-                                        <td>001</td>
-                                        <td>001</td>
+                                    	<td>{{ $no }}</td>
+                                        <td>{{ $bc->tanggal }} </td>
+                                        <td>{{ $bc->keterangan }}</td>
+                                        <td>{{ $bc->jumlah }} </td>
+                                        <td>{{ $bc->status }} </td>
                                     </tr>
-
+                                    <?php $no++ ?>
+                                    @endforeach
+                                     
                                 </tbody>
                             </table>
+                            <br/>
+	Halaman : {{ $bca_cv->currentPage() }} <br/>
+	Jumlah Data : {{ $bca_cv->total() }} <br/>
+	Data Per Halaman : {{ $bca_cv->perPage() }} <br/>
+ 
+ 
+	{{ $bca_cv->links() }}
                         </div>
                     </div>
                 </div>
