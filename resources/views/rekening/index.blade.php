@@ -25,8 +25,8 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="" class="btn bg-gradient-success btn-sm">Tambah</a><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">
-                  Launch Extra Large Modal
+          <button type="button"  class="btn bg-gradient-primary btn-sm" data-toggle="modal" data-target="#modal-lg">
+                  Tambah
                 </button>
                         </div>    
                     <div class="card-body">
@@ -68,56 +68,41 @@
 
 
 
-<div class="modal fade" id="modal-xl">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Extra Large Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-
 
       <div class="modal fade" id="modal-lg">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Large Modal</h4>
+              <h4 class="modal-title">Tambah Rekening</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              
+            <div class="modal-body">            
 
 
  <!-- form start -->
-              <form role="form">
+
+              <form role="form" action="/rekening/store" method="post">
+                {{ csrf_field() }}
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Atas Nama</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="atas_nama" placeholder="Maskuan Nama">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Alias</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Alias" name="alias">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">No Rekening</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="No Rekening" name="norek">
+                  </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Bank</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Bank" name="bank">
+                  </div>
+                 <!-- <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
@@ -128,16 +113,13 @@
                         <span class="input-group-text" id="">Upload</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                  </div> -->
+                  
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn bg-gradient-primary btn-sm">Simpan</button>
                 </div>
               </form>
             </div>
