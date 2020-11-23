@@ -54,6 +54,16 @@
               
             </ul>
           </li>
+
+           <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Yajra
+                <span class="right badge badge-success">New</span>
+              </p>
+            </a>
+          </li>
          
          
 
